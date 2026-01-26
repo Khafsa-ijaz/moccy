@@ -12,11 +12,11 @@ export function Admin() {
     return (
       
         <div className="flex">
-            <aside className={`${menu?"w-70 bg-blue-950  min-h-145 text-white":"w-20 bg-blue-950  min-h-145 text-white"} `}>
+            <aside className={`${menu?"w-70 bg-[#4A154B]  min-h-145 text-white":"w-20 bg-[#4A154B]  min-h-145 text-white"} `}>
                 <div className="flex items-center justify-between ">
                     <div>
-                        <div className="flex items-center gap-0"><img src={moccylogo} alt='logo' className={`${menu?"w-25 h-23 object-contain relative":"hidden"}`} /><span className={`${menu?"text-3xl font-bold absolute left-20":"hidden"}`}>MOCCY</span></div>
-                        <span className={`${menu?"text-xs font-medium absolute top-16 left-40":" hidden"}`}>Admin</span>
+                        <div className="flex items-center gap-0"><img src={moccylogo} alt='logo' className={`${menu?"w-25 h-23 object-contain relative":"hidden"}`} /><span className={`${menu?"text-3xl font-bold absolute left-20 font-[Quicksand]":"hidden"}`}>MOCCY</span></div>
+                        <span className={`${menu?"text-xs font-semibold absolute top-16 left-40 font-[Quicksand]":" hidden"}`}>Admin</span>
                     </div>
                     <button onClick={()=>{setmenu(!menu)}} className={`${menu?"":"hidden"}`}>
                      <RiMenuFold3Line size={30} className="fill-white mr-2 mt-10"/>
