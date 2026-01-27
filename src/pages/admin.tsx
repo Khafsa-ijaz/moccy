@@ -12,7 +12,7 @@ export function Admin() {
     return (
       
         <div className="flex">
-            <aside className={`${menu?"w-70 bg-[#4A154B]  min-h-145 text-white":"w-20 bg-[#4A154B]  min-h-145 text-white"} `}>
+            <aside className={`${menu?"w-70 bg-[#4A154B] min-h-screen text-white":"w-20 bg-[#4A154B]  min-h-145 text-white"} `}>
                 <div className="flex items-center justify-between ">
                     <div>
                         <div className="flex items-center gap-0"><img src={moccylogo} alt='logo' className={`${menu?"w-25 h-23 object-contain relative":"hidden"}`} /><span className={`${menu?"text-3xl font-bold absolute left-20 font-[Quicksand]":"hidden"}`}>MOCCY</span></div>
