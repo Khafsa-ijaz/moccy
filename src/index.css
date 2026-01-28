@@ -1,5 +1,6 @@
 @import "tailwindcss";
 html, body, #root {
   height: 100%;
+  width:100vw;
    font-family: 'Quicksand', sans-serif;
 }
