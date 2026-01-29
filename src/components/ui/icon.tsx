@@ -1,7 +1,4 @@
-// components/ui/Icon.tsx
-import React from "react";
 
-// type for icon names
 type IconName = "dashboard" | "companies" | "jobs" | "products" | "licenses" | "compaign" | "setting";
 
 interface IconProps {
