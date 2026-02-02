@@ -5,6 +5,8 @@ import { Avatar } from "../components/ui/avatar";
 import { Outlet } from "react-router-dom";
 import { NavIcon } from "../components/layouts/navlogo";
 import { Headers } from "../components/layouts/header";
+import { FiSearch } from "react-icons/fi";
+import { LuCommand } from "react-icons/lu";
 
 export function Admin() {
 
@@ -18,7 +20,7 @@ const { menu} = Usenav();
               
             </aside>
             <main className="bg-white flex-1 h-full">
-                <Headers left={<Avatar />} right={<Search />}/>
+                <Headers left={<Avatar />} right={<Search iconp={<FiSearch size={22} className=" text-neutral-400 absolute top-1 left-2  " />} icon2={<LuCommand />} txt="F" />}/>
                <Outlet/>
             </main>
         </div>
