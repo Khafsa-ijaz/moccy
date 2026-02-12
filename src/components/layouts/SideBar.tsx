@@ -7,7 +7,7 @@ export function SideBar() {
     const { menu } = Usenav();
 
     return (
-        <div className="inline-flex justify-center items-center pt-8 pl-8">
+        <div className="inline-flex justify-center items-center pt-8 pl-5">
             <div >
                 <ul  className={`${menu?"flex flex-col gap-6 items-start text-white font-[Quicksand]":"items-center flex flex-col gap-6  text-white font-[Quicksand] font-medium"}`}>
                     <li><NavLink to="/" end className={({ isActive }) => `${isActive ? "font-bold text-2xl" : " text-[#CCB2C8] hover:font-bold"} flex gap-1 justify-center items-center cursor-pointer hover:font-bold group  `}><Icon name="dashboard" className="w-5 h-5" /><span className={`${menu ? "text-xs font-bold" : "hidden"}`}>Dashboard</span></NavLink></li>

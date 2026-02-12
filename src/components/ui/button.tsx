@@ -1,7 +1,7 @@
 import type { ReactNode } from "react"
 
 interface button{
-    left:ReactNode,
+    left?:ReactNode,
     text?:string,
 }
 export function Button({left,text}:button)
