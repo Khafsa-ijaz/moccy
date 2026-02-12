@@ -13,13 +13,13 @@ export function Admin() {
 const { menu} = Usenav();
     return (
 
-        <div className="flex w-screen overflow-hidden">
+        <div className="flex h-screen overflow-hidden">
             <aside className={`${menu ? "w-60 " : "w-20"} bg-[#4A154B] min-h-screen text-white `}>
                <NavIcon/>
                 <SideBar />
               
             </aside>
-            <main className="bg-white flex-1  h-full overflow-auto">
+            <main className="bg-white flex-1  h-full ">
                 <Headers left={<Avatar />} right={<Search iconp={<FiSearch size={22} className=" text-neutral-400 absolute top-1 left-2  " />} icon2={<LuCommand />} txt="F" placeholder="Search or type a command "/>}/>
                <Outlet/>
             </main>

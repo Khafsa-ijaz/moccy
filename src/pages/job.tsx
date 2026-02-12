@@ -46,7 +46,7 @@ export function Jobs() {
                     <Button2 left={<CiFilter />} text={<PiSquareSplitHorizontalFill className="" />} btn={<GrDownload className="" />} />
                 </span>
             </div>
-            <div className=" ml-3 mr-3 mt-5  inline-flex justify-items-center">
+            <div className="flex-1 mt-5 px-3 overflow-auto">
                 <Table />
             </div>
         </div>

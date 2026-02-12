@@ -32,8 +32,8 @@ export function Table() {
     // }
 
     return (
-        <div className="overflow-x-auto  overflow-y-auto w-full rounded-lg overflow-hidden">
-            <table className="table-fixed w-full border border-gray-200 border-collapse rounded-lg">
+        <div className="w-full rounded-lg h-screen overflow-y-scroll">
+            <table className="table-fixed w-full border border-gray-200 border-collapse rounded-lg ">
                 <thead className="bg-stone-100 font-medium text-sm w-full">
                     <tr className="border-b border-gray-200 text-left border">
                         <th className="px-1 py-1"><span className="inline-flex justify-items-center items-center gap-1"><input type="checkbox" className="w-3 h-3" />Job id  <MdArrowDropDown /> </span></th>
