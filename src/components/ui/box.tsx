@@ -5,7 +5,7 @@ import { type CopyWritingStatus } from "../../types/job";
 interface fun{
 onclose:()=>void;
 id:number;
- Changes:(jobId: number, status: CopyWritingStatus|string)=>void;
+ Changes:(jobId: number, status: CopyWritingStatus)=>void;
 }
 export function Box({onclose,id,Changes}:fun) {
     const [status, setstatus]=useState<CopyWritingStatus |string>();
