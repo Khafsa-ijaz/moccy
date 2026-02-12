@@ -58,7 +58,8 @@ export function Table() {
                                 <td className="px-2 py-3 ">{newjob.company}</td>
                                 <td className="px-1 py-3">{newjob.expiry}</td>
                                 <td className="px-1 py-3">{newjob.reference}</td>
-                                    <td className="px-1 py-3">{newjob.status}</td>
+                                 <td className={` "px-1 py-3"`}><span className={`${newjob.status=="completed"?"bg-green-200 text-green-800":newjob.status=="in progress"?"bg-yellow-100 text-yellow-600":newjob.status=="canceled"?"bg-red-200 text-red-800":newjob.status=="requested"?"bg-blue-100 text-blue-800":newjob.status=="sent for review"?"bg-pink-50 text-pink-900":"bg-gray-200 text-gray-600"} rounded-sm px-1 text-black`}>{newjob.status}</span></td>
+                                    {/* <td className="px-1 py-3">{newjob.status}</td> */}
                                 <td className="px-1 py-3 "><span className="  inline-flex justify-items-center items-center gap-2 relative">
                                     {
                                         modal=== newjob.id && (<div className="bg-white absolute  top-4 right-7 rounded-lg shadow-2xl w-40 h-20 p-3 z-10">
