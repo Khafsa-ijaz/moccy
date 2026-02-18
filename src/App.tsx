@@ -8,6 +8,7 @@ import { Products } from './pages/products';
 import { NavApi } from './components/context/navApi';
 import { Compaigns } from './pages/compaigns';
 import { Settings } from './pages/settings';
+import { EditJob } from './pages/editjob';
 
 
 export function App()
@@ -25,6 +26,7 @@ export function App()
              <Route path="/Licenses" element={<Licenses/>}/>
             <Route  path="/compaign" element={<Compaigns/>}/>
              <Route  path="/Setting" element={<Settings/>}/>
+               <Route  path="/jobs/jobedit" element={<EditJob/>}/>
             <Route />
         </Route>
        </Routes>

@@ -23,3 +23,26 @@ export const jobsData = [
   { id: 19, title: "Sales Executive", company: "DealMakers", expiry: "MO", reference: "REF-1019", status: "completed" },
   { id: 20, title: "Operations Manager", company: "FlowWorks", expiry: "UT", reference: "REF-1020", status: "canceled" },
 ];
+export const basicinfo= [
+    {
+        heading:"Basic Information",
+       jobType:"permanent",
+       jobcategory:"Desihn & engineering",
+       jobrole:"Entry Level",
+       employmentType:"Full Time",
+       applicationStartDate:"21 December 2022",
+       appEndDate:"1 January 2023",
+       postions:"4",
+       remote:"fully remote",
+ 
+    }
+];
+export const details=[
+
+    {
+        departments:"",
+        keyword:"",
+        pay:"",
+        positiontype:""
+    }
+];
