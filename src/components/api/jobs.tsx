@@ -40,9 +40,11 @@ export const basicinfo= [
 export const details=[
 
     {
-        departments:"",
-        keyword:"",
-        pay:"",
-        positiontype:""
+         heading:"Other Details",
+        departments:"Design",
+        keyword:"Design,intern,Senior",
+        pay:"$200-$00/mo",
+        positiontype:"Senior",
+        location:"Gulberg House 1,Chapel Hills,United Kingdom A11 B12"
     }
 ];
