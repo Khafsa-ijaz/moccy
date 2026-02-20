@@ -4,16 +4,17 @@ import {CustomToolbar} from "../ui/toobar"
 import { useState, useRef } from "react";
 interface Name{
     prop:string;
+    id:string;
 }
 
-function Editor({prop}:Name) {
+function Editor({prop,id}:Name) {
 
     const quillRef = useRef<ReactQuill>(null);
   const [value, setValue] = useState<string>("");
   const modules = {
 
   toolbar: {
-    container: "#toolbar",
+    container: `#${id}`,
   },
 
   history: {
@@ -35,7 +36,7 @@ const formats = [
   return (
     <div className="bg-white rounded-xl  px-5 py-5 m-3 flex flex-col gap-3">
       <h2 className="font-bold text-neutral-900">{prop}</h2>
-<div className="rounded-lg border overflow-hidden border-neutral-300 bg-stone-100"> <CustomToolbar  quillRef={quillRef}/>
+<div className="rounded-lg border overflow-hidden border-neutral-200 bg-stone-100"> <CustomToolbar  quillRef={quillRef} id={id}/>
     <ReactQuill
       ref={quillRef}
       theme="snow"

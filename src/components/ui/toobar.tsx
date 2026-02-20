@@ -1,9 +1,10 @@
  import ReactQuill from "react-quill-new";
  interface Quill{
      quillRef: React.RefObject<ReactQuill |null>;
+     id:string;
  }
- export const CustomToolbar : React.FC<Quill> = ({quillRef}) => (
-  <div id="toolbar">
+ export const CustomToolbar : React.FC<Quill> = ({quillRef,id}) => (
+  <div id={id}>
      <span className="ql-formats">
       <button className="ql-bold"></button>
       <button className="ql-italic"></button>

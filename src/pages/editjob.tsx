@@ -21,10 +21,10 @@ export function EditJob() {
             <JobCard />
             <JobDetails/>
             <Location/>
-            <Editor prop="About Company"/>
+            <Editor prop="About Company" id="company"/>
 
-            <Editor prop="Elevator Pitch"/>
-            <Editor prop="Job Description"/>
+            <Editor prop="Elevator Pitch" id="elevator"/>
+            <Editor prop="Job Description" id="desc"/>
             
         </div>
         </div>
