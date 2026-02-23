@@ -34,9 +34,9 @@ const formats = [
 ];
 
   return (
-    <div className="bg-white rounded-xl  px-5 py-5 m-3 flex flex-col gap-3">
+    <div className="bg-white rounded-xl  px-8 py-5 m-3 flex flex-col gap-3">
       <h2 className="font-bold text-neutral-900">{prop}</h2>
-<div className="rounded-lg border overflow-hidden border-neutral-200 bg-stone-100"> <CustomToolbar  quillRef={quillRef} id={id}/>
+<div className="rounded-lg border overflow-hidden border-neutral-200 bg-stone-100 "> <CustomToolbar  quillRef={quillRef} id={id}/>
     <ReactQuill
       ref={quillRef}
       theme="snow"
@@ -44,8 +44,8 @@ const formats = [
       onChange={setValue}
       modules={modules}
       formats={formats}
-      className="bg-white"
-    /></div>
+      className="bg-white "
+/></div>
       
     </div>
   );

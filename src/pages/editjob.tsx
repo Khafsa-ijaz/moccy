@@ -14,7 +14,7 @@ export function EditJob() {
                         <p className="text-sm text-neutral-500 font-medium ">Edit the Necessary job details for your applicants</p>
                     </div>
 
-                    <button className="bg-[#4A154B] textlg font-bold text-white px-2 py-1 rounded-md text-sm">Save Changes</button>
+                    <button className="bg-[#4A154B] textlg font-bold text-white px-2 py-1 rounded-md text-sm cursor-pointer">Save Changes</button>
 
                 </div>
             </div>

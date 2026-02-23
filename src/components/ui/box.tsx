@@ -4,10 +4,11 @@ import { useState } from "react";
 import { type CopyWritingStatus } from "../../types/job";
 interface fun{
 onclose:()=>void;
+onclose2:()=>void;
 id:number;
  Changes:(jobId: number, status: CopyWritingStatus)=>void;
 }
-export function Box({onclose,id,Changes}:fun) {
+export function Box({onclose,onclose2,id,Changes}:fun) {
     const [status, setstatus]=useState<CopyWritingStatus |string>();
     return (
         <div className="fixed inset-0 bg-black/40 z-50 flex justify-center items-center"
@@ -15,7 +16,7 @@ export function Box({onclose,id,Changes}:fun) {
              <div className="bg-stone-100  w-105 text-sm flex flex-col gap-3 rounded-lg overflow-hidden">
             <div className=" bg-white shadow-md  p-4 p rounded-t-r-2xl flex justify-between ">
                 <h2 className="font-bold  text-xl">Change Status</h2>
-                <button onClick={onclose}>< IoClose size={20} className="fill-neutral-300"/></button>
+                <button onClick={()=>{onclose();onclose2()}}>< IoClose size={20} className="fill-neutral-300 cursor-pointer"/></button>
             </div>
             
             <div className=" m-3 p-2 rounded-lg bg-white flex flex-col gap-2 justify-center items-start w-100 h-25 ">
@@ -35,8 +36,8 @@ export function Box({onclose,id,Changes}:fun) {
 
             </div>
             <div className="w-100 flex gap-4 justify-end items-end leading-tight text-right p-2">
-                    <button className="p-2 pl-4 rounded-lg text-[#4A154B] font-semibold">Cancel</button>
-                    <button className="p-2 pl-4 pr-4 rounded-lg bg-[#4A154B] text-white font-semibold" onClick={()=>{Changes(id,status as CopyWritingStatus);onclose()}}>Save Changes</button>
+                    <button className="p-2 pl-4 rounded-lg text-[#4A154B] font-semibold cursor-pointer" onClick={()=>{onclose();onclose2()}}>Cancel</button>
+                    <button className="p-2 pl-4 pr-4 rounded-lg bg-[#4A154B] text-white font-semibold cursor-pointer" onClick={()=>{Changes(id,status as CopyWritingStatus);onclose();onclose2()}}>Save Changes</button>
                 </div>
                 
                 

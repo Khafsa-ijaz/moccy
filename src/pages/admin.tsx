@@ -20,9 +20,12 @@ const { menu} = Usenav();
               
             </aside>
             <main className="bg-white flex-1 overflow-hidden">
-                <Headers left={<Avatar />} right={<Search iconp={<FiSearch size={22} className=" text-neutral-400 absolute top-1 left-2  " />} icon2={<LuCommand />} txt="F" placeholder="Search or type a command "/>}/>
+                <Headers left={<Avatar />} right={<Search iconp={<FiSearch size={20} className=" text-neutral-400 absolute top-1 left-2  " />} icon2={<LuCommand />} txt="F" placeholder="Search or type a command "/>}/>
                <Outlet/>
+
             </main>
+            
+           
         </div>
 
     )

@@ -8,8 +8,8 @@ export function Button({left,text}:button)
 {
     return(
         <>
-        <div className="w-auto p-2 h-8 border drop-shadow-lg text-neutral-500 border-stone-200 inline-flex justify-center items-center rounded-sm">
-            <button >{left}</button>
+        <div className="w-auto p-2 h-8 border drop-shadow-lg text-neutral-500 border-stone-200 inline-flex justify-center items-center rounded-sm cursor-pointer">
+            <button className="cursor-pointer">{left}</button>
             <span className="text-sm font-semibold text-neutral-500">{text}</span>
             <></>
            

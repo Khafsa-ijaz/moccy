@@ -6,7 +6,7 @@ export function Location()
     return(
     <div>
        { data.map((info,index)=>(
-         <div className="bg-white rounded-xl  px-5 py-5 m-3 flex flex-col gap-3" key={index}>
+         <div className="bg-white rounded-xl  px-8 py-5 m-3 flex flex-col gap-3" key={index}>
                 <h1 className="font-bold text-md text-neutral-950">
                     Job Location
                 </h1>

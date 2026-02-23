@@ -36,7 +36,7 @@ export function Table() {
             <table className="table-fixed w-full border border-gray-200 border-collapse rounded-lg ">
                 <thead className="bg-stone-100 font-medium text-sm w-full">
                     <tr className="border-b border-gray-200 text-left border">
-                        <th className="px-1 py-1"><span className="inline-flex justify-items-center items-center gap-1"><input type="checkbox" className="w-3 h-3" />Job id  <MdArrowDropDown /> </span></th>
+                        <th className="px-1 py-1"><span className="inline-flex justify-items-center items-center gap-1"><input type="checkbox" className="w-3 h-3 cursor-pointer" />Job id  <MdArrowDropDown /> </span></th>
                         <th className="px-1 py-1 "><span className="inline-flex justify-items-center items-center">Job Title<MdArrowDropDown /></span></th>
                         <th className="px-2 py-1"><span className="inline-flex justify-items-center items-center">Company <MdArrowDropDown /></span></th>
                         <th className="px-1 py-1"><span className="inline-flex justify-items-center items-center">Expirey date  <MdArrowDropDown /></span></th>
@@ -53,7 +53,7 @@ export function Table() {
                         jobs.map((newjob, index) => (
                             <tr className=" relative border-b border-gray-200 text-left text-sm font-medium text-neutral-500" key={index}>
 
-                                <td className="px-1 py-3 "><span className="flex gap-1 items-center"><input type="checkbox" className="w-3 h-3" />{newjob.id}</span></td>
+                                <td className="px-1 py-3 "><span className="flex gap-1 items-center"><input type="checkbox" className="w-3 h-3 cursor-pointer" />{newjob.id}</span></td>
                                 <td className="px-1 py-3">{newjob.title}</td>
                                 <td className="px-2 py-3 ">{newjob.company}</td>
                                 <td className="px-1 py-3">{newjob.expiry}</td>
@@ -68,8 +68,8 @@ export function Table() {
                                             </ul>
                                         </div>)
                                     }
-                                    <button onClick={() => { setmodal(modal === newjob.id ? null : newjob.id) }}><BsThreeDotsVertical /></button>
-                                    <button><IoEyeOutline /></button>
+                                    <button className="cursor-pointer" onClick={() => { setmodal(modal === newjob.id ? null : newjob.id) }}><BsThreeDotsVertical /></button>
+                                    <button className="cursor-pointer"><IoEyeOutline /></button>
                                 </span></td>
                             </tr>
                         )
@@ -79,7 +79,7 @@ export function Table() {
                     }
                     
                     {
-                        boxmodal && <Box onclose={() => setboxmodal(null)} id={boxmodal} Changes={handleChanges}/>
+                        boxmodal && <Box onclose={() => setboxmodal(null)}  onclose2={() => setmodal(null)} id={boxmodal} Changes={handleChanges}/>
                     }
                 </tbody>
 

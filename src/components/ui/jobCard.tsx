@@ -6,13 +6,13 @@ export function JobCard()
     return(
     <div>
        { data.map((info,index)=>(
-         <div className="bg-white rounded-xl  px-5 py-5 m-3 flex flex-col gap-3" key={index}>
+         <div className="bg-white rounded-xl  px-8 py-5 m-3 flex flex-col gap-3" key={index}>
                 <h1 className="font-bold text-md text-neutral-950">
                     {info.heading}
                 </h1>
                 
 
-                <div className="flex justify-between text-neutral-900 font-[Quicksand]">
+                <div className="flex justify-between text-neutral-900 font-[Quicksand] ">
                 <div className="flex flex-col gap-4">
                     <div className="flex gap-1  flex-col items-start"><span className="font-bold text-sm">Job Type</span>
                         <span className="font-medium text-sm">{info.jobType}</span>
