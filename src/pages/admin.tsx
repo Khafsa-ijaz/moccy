@@ -19,10 +19,16 @@ const { menu} = Usenav();
                 <SideBar />
               
             </aside>
-            <main className="bg-white flex-1 overflow-hidden">
-                <Headers left={<Avatar />} right={<Search iconp={<FiSearch size={20} className=" text-neutral-400 absolute top-1 left-2  " />} icon2={<LuCommand />} txt="F" placeholder="Search or type a command "/>}/>
-               <Outlet/>
+            <main className="bg-white flex-1 flex flex-col overflow-hidden">
+                <Headers left={<Avatar />} right={<Search iconp={<FiSearch size={19} className=" text-neutral-400 absolute top-2 left-2  " />} icon2={<LuCommand />} txt="F" placeholder="Search or type a command "/>}/>
+               {/* <Outlet/>*/}
+  <div className="flex-1 overflow-auto">
+    <Outlet />
+  </div>
 
+  <footer className="p-0 text-center text-sm text-gray-500 border-t border-gray-200">
+  
+  </footer>
             </main>
             
            

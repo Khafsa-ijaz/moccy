@@ -5,7 +5,7 @@ import { Location } from "../components/ui/location";
 
 export function EditJob() {
     return (
-        <div className="h-screen overflow-auto">
+        <div className="overflow-auto">
    <div className="bg-stone-100  ">
             <div className=" bg-stone-50 font-[Quicksand] ">
                 <div className=" flex justify-between mt-2 m-3 px-2 py-2">

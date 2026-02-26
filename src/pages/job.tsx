@@ -12,9 +12,8 @@ import { jobsData } from "../components/api/jobs";
 export function Jobs() {
 
     return (
-        <div className="">
-
-            <div className=" flex flex-col  gap-2 shadow-sm h-22 p-5 mt-3"><span className="flex justify-between  "><h1 className="font-[Quicksand] font-semibold text-xl">Jobs({jobsData.length})</h1>
+        <div className="flex flex-col h-full">
+              <div className="  gap-2 shadow-sm p-5 mt-3"><span className="flex justify-between  "><h1 className="font-[Quicksand] font-semibold text-xl">Jobs({jobsData.length})</h1>
                 <button className="w-8 h-8 border drop-shadow-lg border-stone-200 inline-flex justify-center items-center rounded-sm cursor-pointer">< BsThreeDotsVertical /></button></span>
                 <span>
                     <ul className="flex gap-6  text-neutral-500 font-medium text-sm">
@@ -40,7 +39,7 @@ export function Jobs() {
                 </span>
             </div>
             <div className="ml-3 mr-3 mt-5 flex justify-between ">
-                <Search iconp={<FiSearch size={20} className=" text-neutral-400 absolute top-1 left-2  " />} placeholder="Search Fields " />
+                <Search iconp={<FiSearch size={18} className=" text-neutral-400 absolute top-2 left-2  " />} placeholder="Search Fields " />
                 <span className="flex gap-2">
                     <Button left={<CiFilter />} text="Filter" />
                     <Button2 left={<CiFilter />} text={<PiSquareSplitHorizontalFill className="" />} btn={<GrDownload className="" />} />
