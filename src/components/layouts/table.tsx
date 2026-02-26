@@ -5,6 +5,7 @@ import { useState } from "react";
 import { type Job ,type CopyWritingStatus } from "../../types/job";
 import { jobsData } from "../api/jobs"
 import { Box } from "../ui/box";
+import { NavLink } from "react-router-dom";
 
 
 export function Table() {
@@ -32,17 +33,17 @@ export function Table() {
     // }
 
     return (
-        <div className="w-full rounded-lg h-screen overflow-y-scroll">
-            <table className="table-fixed w-full border border-gray-200 border-collapse rounded-lg ">
+        <div className="w-full rounded-lg border border-gray-200 overflow-hidden">
+            <table className="table-fixed w-full border-separate  border-spacing-0 rounded-lg ">
                 <thead className="bg-stone-100 font-medium text-sm w-full">
                     <tr className="border-b border-gray-200 text-left border">
-                        <th className="px-1 py-1"><span className="inline-flex justify-items-center items-center gap-1"><input type="checkbox" className="w-3 h-3 cursor-pointer" />Job id  <MdArrowDropDown /> </span></th>
-                        <th className="px-1 py-1 "><span className="inline-flex justify-items-center items-center">Job Title<MdArrowDropDown /></span></th>
-                        <th className="px-2 py-1"><span className="inline-flex justify-items-center items-center">Company <MdArrowDropDown /></span></th>
-                        <th className="px-1 py-1"><span className="inline-flex justify-items-center items-center">Expirey date  <MdArrowDropDown /></span></th>
-                        <th className="px-1 py-1 w-40"> <span className="inline-flex justify-items-center items-center">Reference number  <MdArrowDropDown /></span></th>
-                        <th className="px-1 py-1 "><span className="inline-flex justify-items-center items-center">CopyWriting  <MdArrowDropDown /></span></th>
-                        <th className="px-1 py-1"><span className="inline-flex justify-items-center items-center">Actions <MdArrowDropDown /></span></th>
+                        <th className="px-3 py-3"><span className="inline-flex justify-items-center items-center gap-1"><input type="checkbox" className="w-3 h-3 cursor-pointer" />Job id  <MdArrowDropDown size={19}/> </span></th>
+                        <th className="px-1 py-1 "><span className="inline-flex justify-items-center items-center">Job Title<MdArrowDropDown size={19}/></span></th>
+                        <th className="px-2 py-1"><span className="inline-flex justify-items-center items-center">Company <MdArrowDropDown size={19}/></span></th>
+                        <th className="px-1 py-1"><span className="inline-flex justify-items-center items-center">Expirey date  <MdArrowDropDown size={19}/></span></th>
+                        <th className="px-1 py-1 w-40"> <span className="inline-flex justify-items-center items-center">Reference number  <MdArrowDropDown size={19}/></span></th>
+                        <th className="px-1 py-1 "><span className="inline-flex justify-items-center items-center">CopyWriting  <MdArrowDropDown size={19}/></span></th>
+                        <th className="px-1 py-1"><span className="inline-flex justify-items-center items-center">Actions <MdArrowDropDown size={19}/></span></th>
                     </tr>
                 </thead>
                 <tbody className="relative">
@@ -51,14 +52,14 @@ export function Table() {
 
                     {
                         jobs.map((newjob, index) => (
-                            <tr className=" relative border-b border-gray-200 text-left text-sm font-medium text-neutral-500" key={index}>
+                            <tr className="relative border-b border-gray-200 text-left text-sm font-medium text-neutral-500" key={index}>
 
-                                <td className="px-1 py-3 "><span className="flex gap-1 items-center"><input type="checkbox" className="w-3 h-3 cursor-pointer" />{newjob.id}</span></td>
+                                <td className="px-3 py-3  "><span className="flex gap-1 items-center"><input type="checkbox" className="w-3 h-3 cursor-pointer" />{newjob.id}</span></td>
                                 <td className="px-1 py-3">{newjob.title}</td>
                                 <td className="px-2 py-3 ">{newjob.company}</td>
                                 <td className="px-1 py-3">{newjob.expiry}</td>
                                 <td className="px-1 py-3">{newjob.reference}</td>
-                                 <td className={` "px-1 py-3"`}><span className={`${newjob.status=="completed"?"bg-green-200 text-green-800":newjob.status=="in progress"?"bg-yellow-100 text-yellow-600":newjob.status=="canceled"?"bg-red-200 text-red-800":newjob.status=="requested"?"bg-blue-100 text-blue-800":newjob.status=="sent for review"?"bg-pink-50 text-pink-900":"bg-gray-200 text-gray-600"} rounded-sm px-1 text-black`}>{newjob.status}</span></td>
+                                 <td className="px-1 py-3"><span className={`${newjob.status=="completed"?"bg-green-200 text-green-800":newjob.status=="in progress"?"bg-yellow-100 text-yellow-600":newjob.status=="canceled"?"bg-red-200 text-red-800":newjob.status=="requested"?"bg-blue-100 text-blue-800":newjob.status=="sent for review"?"bg-pink-50 text-pink-900":"bg-gray-200 text-gray-600"} rounded-sm px-1 text-black`}>{newjob.status}</span></td>
                                     {/* <td className="px-1 py-3">{newjob.status}</td> */}
                                 <td className="px-1 py-3 "><span className="  inline-flex justify-items-center items-center gap-2 relative">
                                     {
@@ -69,7 +70,7 @@ export function Table() {
                                         </div>)
                                     }
                                     <button className="cursor-pointer" onClick={() => { setmodal(modal === newjob.id ? null : newjob.id) }}><BsThreeDotsVertical /></button>
-                                    <button className="cursor-pointer"><IoEyeOutline /></button>
+                                    <button className="cursor-pointer"><NavLink to="/jobs/jobedit"><IoEyeOutline /></NavLink></button>
                                 </span></td>
                             </tr>
                         )
